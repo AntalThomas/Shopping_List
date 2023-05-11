@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if current_user() %}
+<section class="page">
+    <section class="controls">
+        <h1>{{ current_user()['first_name'] }}'s Lists</h1>
+
+        <section class="user_controls">
+            <form action="/sessions/delete" method="POST">
+                <button>Sign Out</button>
+            </form>
+
+            <a href="/lists/new">➕</a>
+        </section>
+    </section>
+
+    <section class="all_lists">
+        <section class="lists">
+            <h2 class="list_title"></h2>
+
+            <form action="/lists//delete" method="POST">
+                <button>🗑️</button>
+            </form>
+        </section>
+    </section>
+</section>
+{% else %}
+<a class="login" href="/users/new">Add New User</a>
+<a class="login" href="/sessions/new">Log In</a>
+{% endif %}
+{% endblock %}

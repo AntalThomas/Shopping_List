@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hamburger_stack">
+    <form action="/sessions/index">
+        <button>Log Out</button>
+    </form>
+</section>
+
+<section class="list_title">
+    <h1>{{ list['name'] }}</h1>
+
+    <section class="add_item">
+        <h2>➕ Add Add Item</h2>
+    </section>
+</section>
+
+{% for category in categories %}
+<section class="category">
+    <h2>{{ category['name'] }}</h2>
+
+    {% for item in category %}
+        <section class="item_category">
+            <section>
+                <input type="checkbox" class="round">
+                <h3>{{ item['name'] }}</h3>
+            </section>
+            
+            <form action="{{ item['id'] }}/delete" method="POST">
+                <button>🗑️</button>
+            </form>
+        </section>
+    {% endfor %}
+</section>
+{% endfor %}
+{% endblock %}
