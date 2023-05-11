@@ -1,11 +1,14 @@
 # Shopping List
 SEI Project 2
 
-This shopping list app can be used to organise and check off everything you need before and after you go shopping. It features different categories, quantites and multiple lists features.
+This shopping list app is a full-stack application developed using HTML, CSS, Python and PSQL. The app can be used to organise and check off everything you need before and after you go shopping. It features different categories, quantites and multiple list features.
 
 ## [Click Here](https://antalthomas.github.io/Shopping_List/) to see my live project!
 
 ## How to use
+- 
+
+## Technologies Used
 - 
 
 
@@ -26,4 +29,4 @@ This shopping list app can be used to organise and check off everything you need
 ## Future Features
 - 
 
-## Sources used
+## Sources Used
