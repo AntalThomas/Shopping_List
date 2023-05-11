@@ -15,6 +15,7 @@ body {
 .page {
     background-color: #5eb1bf;
     padding: 1rem;
+    height: 90vh;
 }
 
 .controls {
@@ -39,6 +40,7 @@ body {
 
 .all_lists {
     width: 80%;
+    height: 90%;
     border: 2px solid #042a2b;
     border-radius: 5px;
     margin-top: 1rem;
@@ -47,10 +49,12 @@ body {
 .lists {
     height: 75px;
     padding: 1rem;
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
     align-items: center;
-    text-align: left;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-bottom: 2px solid #042a2b;
 }
 
 .lists:hover {

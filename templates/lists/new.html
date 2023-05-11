@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Add Item</h1>
+<h1>Add List</h1>
 
 <form action="/lists" method="POST">
-    <label for="">Item:</label>
-    <input type="text" name="item">
+    <label for="">Name:</label>
+    <input type="text" name="name">
 
-    <label for="">Category:</label>
-    <input type="text" name="category">
-
-    <button>Add Item</button>
+    <button>Add List</button>
 </form>
 {% endblock %}
