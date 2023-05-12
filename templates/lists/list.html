@@ -9,7 +9,7 @@
     <h1>{{ lists_name[0]['name'] }} List</h1>
     <h1>{{ lists_name[0]['id'] }} LIST ID FOR TESTING</h1>
 
-    <form action="/{{ lists_name[0]['id'] }}/create_item" method="POST">
+    <form action="/lists/{{ lists_name[0]['id'] }}/list/create" method="POST">
         <input type="text" placeholder="Add Item" name="add_item">
         <button>Add Item</button>
     </form>

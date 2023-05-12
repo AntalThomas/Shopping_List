@@ -27,12 +27,9 @@ def new_item():
     return render_template("lists/<id>/new_item.html")
 
 def create_item(id):
-    return id
-    lists_id = item_linked_list(id)[0]['linked_list']
-    return lists_id
     name = request.form.get('add_item')
-    make_item(name, lists_id)
-    return select_list(lists_id)
+    make_item(name, id)
+    return select_list(id)
 
 def remove_item(id):
     lists_id = item_linked_list(id)[0]['linked_list']
