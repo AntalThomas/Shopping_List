@@ -1,36 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="hamburger_stack">
-    <form action="/sessions/index">
-        <button>Log Out</button>
-    </form>
-</section>
+<a href="/lists">
+    <section class="hamburger_stack">cvcvvbc</section>
+</a>
 
 <section class="list_title">
-    <h1>{{ list['name'] }}</h1>
+    <h1>{{ lists_name[0]['name'] }} List</h1>
+    <h1>{{ lists_name[0]['id'] }} LIST ID FOR TESTING</h1>
 
-    <section class="add_item">
-        <h2>➕ Add Add Item</h2>
-    </section>
+    <form action="/{{ lists_name[0]['id'] }}/create_item" method="POST">
+        <input type="text" placeholder="Add Item" name="add_item">
+        <button>Add Item</button>
+    </form>
+    <!-- <a href="/lists/{{ lists_name[0]['id'] }}/new_item">➕ Add Item</a> -->
 </section>
 
-{% for category in categories %}
-<section class="category">
-    <h2>{{ category['name'] }}</h2>
-
-    {% for item in category %}
-        <section class="item_category">
-            <section>
-                <input type="checkbox" class="round">
-                <h3>{{ item['name'] }}</h3>
-            </section>
-            
-            <form action="{{ item['id'] }}/delete" method="POST">
-                <button>🗑️</button>
-            </form>
+{% for item in list %}
+    <section class="item">
+        <section>
+            <input type="checkbox" class="round">
+            <h3>{{ item['name'] }}</h3>
+            {{ item['id'] }}
         </section>
-    {% endfor %}
-</section>
+        
+        <form action="/lists/{{ item['id'] }}/list/delete" method="POST">
+            <button>🗑️</button>
+        </form>
+    </section>
 {% endfor %}
+</section>
 {% endblock %}

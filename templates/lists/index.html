@@ -4,7 +4,7 @@
 {% if current_user() %}
 <section class="page">
     <section class="controls">
-        <h1>{{ current_user()['first_name'] }}'s Lists</h1>
+        <h1>{{ current_user()['first_name'] }}s Lists</h1>
 
         <section class="user_controls">
             <form action="/sessions/delete" method="POST">
@@ -17,13 +17,13 @@
 
     <section class="all_lists">
         {% for list in lists %}
-            <section class="lists">
-                <h2 class="list_title">{{ list['name'] }}</h2>
+        <a class="lists" href="/lists/{{ list['id'] }}/list">
+            <h2 class="list_title">{{ list['name'] }}</h2>
 
-                <form action="/lists/{{ list['id'] }}/delete" method="POST">
-                    <button>🗑️</button>
-                </form>
-            </section>
+            <form action="/lists/{{ list['id'] }}/delete" method="POST">
+                <button>🗑️</button>
+            </form>
+        </a>  
         {% endfor %}
     </section>
 </section>

@@ -9,7 +9,6 @@ CREATE TABLE lists(
 CREATE TABLE items(
     id SERIAL PRIMARY KEY,
     name TEXT,
-    category TEXT,
     linked_list TEXT
 );
 
@@ -26,3 +25,7 @@ CREATE TABLE users(
     email TEXT,
     password_digest TEXT
 );
+
+INSERT INTO items(name, linked_list) VALUES('Carrots', 22);
+INSERT INTO items(name, linked_list) VALUES('Apples', 22);
+INSERT INTO items(name, linked_list) VALUES('Blake', 15);

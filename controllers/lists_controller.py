@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect
 from services.session_info import current_user
-from models.lists import all_lists, create_list, delete_list
+from models.lists import all_lists, create_list, delete_list, get_list, get_list_name, make_item, delete_item, item_linked_list
 
 def index():
     lists = all_lists()
@@ -16,4 +16,25 @@ def create():
 
 def delete(id):
     delete_list(id)
-    return redirect('/')
+    return redirect("/")
+
+def select_list(id):
+    list = get_list(id)
+    lists_name = get_list_name(id)
+    return render_template("lists/list.html", list=list, lists_name=lists_name)
+
+def new_item():
+    return render_template("lists/<id>/new_item.html")
+
+def create_item(id):
+    return id
+    lists_id = item_linked_list(id)[0]['linked_list']
+    return lists_id
+    name = request.form.get('add_item')
+    make_item(name, lists_id)
+    return select_list(lists_id)
+
+def remove_item(id):
+    lists_id = item_linked_list(id)[0]['linked_list']
+    delete_item(id)
+    return select_list(lists_id)
