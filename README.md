@@ -1,20 +1,21 @@
 # Shopping List
 SEI Project 2
 
-This shopping list app is a full-stack application developed using HTML, CSS, Python, PSQL and Flask. The app can be used to organise and check off everything you need before and after you go shopping. It will feature different categories*, quantites* and multiple list features. (* ***COMING SOON***)
+This shopping list app is a full-stack application developed using multiple technologies listed below. The app can be used to organize and check off everything you need before and after you go shopping. It will feature different categories*, quantities* and multiple list features.
+(* *COMING SOON*)
 
 ## [Click Here](https://antalthomas.github.io/Shopping_List/) to see my live project!
 
 ## How to use
-- Sign Up/Log In
-- Click the ➕
-- Create a name for your list
-- Click on the list to open it
-- Type into the add item input and click the button
-- Click the trash bin to remove the item or the checkbox to cross it off
-- Click the hamburger menu to return to all your lists or to log out
-- Click the trash bin to remove the list
-- Sign Out
+1. Sign Up/Log In
+2. Click the ➕
+3. Create a name for your list
+4. Click on the list to open it
+5. Type into the add item input and click the button
+6. Click the trash bin to remove the item or the checkbox to cross it off
+7. Click the hamburger menu to return to all your lists or to log out
+8. Click the trash bin to remove the list
+9. Sign Out
 
 
 ## Technologies Used
@@ -23,7 +24,10 @@ This shopping list app is a full-stack application developed using HTML, CSS, Py
 - Python
 - SQL/PSQL
 - Flask
+- Psycopg2
+- Bcrypt
 - Render Cloud Hosting
+- Javascript
 
 
 ## Initial Plan

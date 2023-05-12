@@ -1,33 +1,34 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<a href="/lists">
-    <section class="hamburger_stack">cvcvvbc</section>
-</a>
+<section class="page">
+    <section class="list_header">
+        <a href="/lists">
+            <section class="hamburger_stack">
+                <section class="burger"></section>
+                <section class="burger"></section>
+                <section class="burger"></section>
+            </section>
+        </a>
 
-<section class="list_title">
-    <h1>{{ lists_name[0]['name'] }} List</h1>
-    <h1>{{ lists_name[0]['id'] }} LIST ID FOR TESTING</h1>
+        <h3>{{ lists_name[0]['name'] }} List</h3>
+    </section>
 
     <form action="/lists/{{ lists_name[0]['id'] }}/list/create" method="POST">
-        <input type="text" placeholder="Add Item" name="add_item">
-        <button>Add Item</button>
+        <input type="text" placeholder="Add Item" name="add_item" class="add_item">
     </form>
-    <!-- <a href="/lists/{{ lists_name[0]['id'] }}/new_item">➕ Add Item</a> -->
-</section>
 
-{% for item in list %}
-    <section class="item">
-        <section>
-            <input type="checkbox" class="round">
-            <h3>{{ item['name'] }}</h3>
-            {{ item['id'] }}
-        </section>
-        
-        <form action="/lists/{{ item['id'] }}/list/delete" method="POST">
-            <button>🗑️</button>
-        </form>
+    <section class="all_items">
+        {% for item in list %}
+            <section class="items">
+                <section class="remove_spacing">
+                    <h4>{{ item['name'] }}</h4>
+                </section>
+                
+                <form action="/lists/{{ item['id'] }}/list/delete" method="POST" class="remove_spacing">
+                    <button>🗑️</button>
+                </form>
+            </section>
+        {% endfor %}
     </section>
-{% endfor %}
 </section>
 {% endblock %}

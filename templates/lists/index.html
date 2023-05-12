@@ -17,13 +17,13 @@
 
     <section class="all_lists">
         {% for list in lists %}
-        <a class="lists" href="/lists/{{ list['id'] }}/list">
-            <h2 class="list_title">{{ list['name'] }}</h2>
+            <a class="lists" href="/lists/{{ list['id'] }}/list">
+                <h2 class="remove_spacing">{{ list['name'] }}</h2>
 
-            <form action="/lists/{{ list['id'] }}/delete" method="POST">
-                <button>🗑️</button>
-            </form>
-        </a>  
+                <form action="/lists/{{ list['id'] }}/delete" method="POST" class="remove_spacing">
+                    <button>🗑️</button>
+                </form>
+            </a>  
         {% endfor %}
     </section>
 </section>
