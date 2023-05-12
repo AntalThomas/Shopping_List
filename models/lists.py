@@ -1,10 +1,12 @@
 from db.db import sql
+from flask import session
 
 def all_lists():
-    return sql('SELECT * FROM lists ORDER BY id')
+    # return sql('SELECT * FROM lists ORDER BY id')
+    return sql('SELECT * FROM lists WHERE linked_user=%s ORDER BY id', [session.get('user_id')])
 
-def create_list(name):
-    sql('INSERT INTO lists(name) VALUES (%s) RETURNING *', [name])
+def create_list(name, linked_user):
+    sql('INSERT INTO lists(name, linked_user) VALUES (%s, %s) RETURNING *', [name, linked_user])
 
 def delete_list(id):
     sql('DELETE FROM lists WHERE id=%s RETURNING *', [id])

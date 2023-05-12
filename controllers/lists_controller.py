@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, session
 from services.session_info import current_user
 from models.lists import all_lists, create_list, delete_list, get_list, get_list_name, make_item, delete_item, item_linked_list
 
@@ -11,7 +11,9 @@ def new():
 
 def create():
     name = request.form.get("name")
-    create_list(name)
+    user_id = session.get('user_id')
+
+    create_list(name, user_id)
     return redirect("/")
 
 def delete(id):

@@ -1,7 +1,6 @@
-import psycopg2
-import psycopg2.extras
+import psycopg2, psycopg2.extras, os
 
-DB_URL = "dbname=shopping_list_db"
+DB_URL = os.environ.get("DATABASE_URL", "dbname=shopping_list_db")
 
 def sql(query, parameters=[]):
     connection = psycopg2.connect(DB_URL) # OPEN CONNECTION

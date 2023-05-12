@@ -77,8 +77,8 @@ body {
     border-bottom: 2px solid #042a2b;
 }
 
-.items:hover {
-    background-color: #cdedf6;
+.items button:hover {
+    color: #cdedf6;
 }
 
 .remove_spacing {
@@ -88,7 +88,6 @@ body {
 
 .crossed_off {
     text-decoration: line-through;
-    
 }
 
 h1 {
@@ -114,7 +113,7 @@ h4 {
 }
 
 .lists:hover {
-    background-color: #cdedf6;
+    color: #cdedf6;
 }
 
 .lists:last-child {

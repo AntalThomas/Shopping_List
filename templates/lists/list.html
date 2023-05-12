@@ -21,7 +21,7 @@
         {% for item in list %}
             <section class="items">
                 <section class="remove_spacing">
-                    <h4>{{ item['name'] }}</h4>
+                    <button class="item_name"><h4>{{ item['name'] }}</h4></button>
                 </section>
                 
                 <form action="/lists/{{ item['id'] }}/list/delete" method="POST" class="remove_spacing">

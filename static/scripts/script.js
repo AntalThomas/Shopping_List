@@ -1,10 +1,7 @@
-const items = document.querySelectorAll(".items")
+var items = document.querySelectorAll(".items")
 
-console.log(items)
-
-console.log("Hello")
-
-items.addEventListener("click", () => {
-  items.classList.toggle("crossed_off")
-  console.log("Clicked")
-})
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener("click", function (event) {
+        event.target.classList.toggle("crossed_off")
+    })
+}

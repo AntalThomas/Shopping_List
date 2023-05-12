@@ -57,3 +57,9 @@ Starting out instead of trying to just get each feature to work one by one, I tr
 
 ## Sources Used
 https://coolors.co/
+https://stackoverflow.com/questions/59054548/js-get-the-clicked-element-with-event-target
+https://stackoverflow.com/questions/59054548/js-get-the-clicked-element-with-event-target
+https://stackoverflow.com/questions/35077658/css-selector-for-no-children-but-not-empty
+https://developer.mozilla.org/en-US/docs/Web/CSS/:has#browser_compatibility
+https://stackoverflow.com/questions/7298057/how-can-i-select-the-last-element-with-a-specific-class-not-last-child-inside-o
+https://www.markdownguide.org/cheat-sheet/
