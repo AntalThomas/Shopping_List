@@ -52,6 +52,7 @@ This shopping list app is a full-stack application developed using multiple tech
 
 ## Struggles
 Starting out instead of trying to just get each feature to work one by one, I tried to get it all working together at once making me waste a lot of my time trouble shooting bugs.
+Deploying the website and getting Flask-session to work was a big issue for me and a few other students.
 
 ## Bugs to Fix
 - If nothing is entered in the input field for adding a list or item it will still add data to the database.
