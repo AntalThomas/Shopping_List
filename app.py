@@ -4,10 +4,10 @@ from routes.users_routes import users_routes
 from routes.sessions_routes import sessions_routes
 from routes.lists_routes import lists_routes
 
-FLASK_SECRET_KEY = os.environ.get("SHOPPING_KEY")
+SECRET_KEY = os.environ.get("SHOPPING_KEY")
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = FLASK_SECRET_KEY
+app.config['SECRET_KEY'] = SECRET_KEY
 app.config['SESSION_TYPE'] = 'filesystem'
 
 app.register_blueprint(users_routes, url_prefix="/users")

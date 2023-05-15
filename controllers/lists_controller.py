@@ -51,3 +51,8 @@ def share_list(id):
     all_users = get_users()
     user_id = session.get('user_id')
     return render_template("lists/share.html", all_users=all_users, user_id=user_id, list_id=id)
+
+def move_item(id):
+    lists = all_lists()
+    item_info = get_item(id)
+    return render_template("lists/move.html", lists=lists, item_info=item_info)

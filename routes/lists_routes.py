@@ -1,5 +1,5 @@
 from flask import Blueprint
-from controllers.lists_controller import index, new, create, delete, select_list, new_item, create_item, remove_item, edit_item, update_item, share_list
+from controllers.lists_controller import index, new, create, delete, select_list, new_item, create_item, remove_item, edit_item, update_item, share_list, move_item
 
 lists_routes = Blueprint("lists_routes", __name__)
 
@@ -14,3 +14,4 @@ lists_routes.route("/<id>/list/delete", methods=["POST"])(remove_item)
 lists_routes.route("/<id>/edit_item.html")(edit_item)
 lists_routes.route("/<id>/update_item", methods=["POST"])(update_item)
 lists_routes.route("/<id>/share.html")(share_list)
+lists_routes.route("/<id>/move.html")(move_item)
