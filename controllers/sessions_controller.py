@@ -16,7 +16,7 @@ def create():
     valid_password = bcrypt.checkpw(password.encode(), user['password_digest'].encode())
     
     if valid_password:
-        session['user_id'] = user['id']
+        session['id'] = user['id']
         session['email'] = user['email']
         session['password'] = user['password_digest']
         return redirect('/')
