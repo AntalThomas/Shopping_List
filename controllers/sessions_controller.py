@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, session
-from models.users import find_user_by_email
+from models.users import find_user_by_email, remove_user
 import bcrypt
 
 def new():
@@ -22,5 +22,10 @@ def create():
         return redirect('/sessions/new')
     
 def delete():
+    session.clear()
+    return redirect('/')
+
+def remove():
+    remove_user(session['user_id'])
     session.clear()
     return redirect('/')

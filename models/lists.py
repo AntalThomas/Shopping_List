@@ -19,7 +19,7 @@ def get_list_name(id):
     return sql('SELECT * FROM lists WHERE id=%s', [id])
 
 def make_item(name, linked_list):
-    sql('INSERT INTO items(name, linked_list) VALUES (%s, %s) RETURNING *', [name, linked_list])
+    sql('INSERT INTO items(name, linked_list, linked_user) VALUES (%s, %s, %s) RETURNING *', [name, linked_list, session.get('user_id')])
 
 def delete_item(id):
     sql('DELETE FROM items WHERE id=%s RETURNING *', [id])

@@ -10,7 +10,8 @@ CREATE TABLE lists(
 CREATE TABLE items(
     id SERIAL PRIMARY KEY,
     name TEXT,
-    linked_list TEXT
+    linked_list TEXT,
+    linked_user INTEGER
 );
 
 CREATE TABLE users(

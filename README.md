@@ -8,13 +8,14 @@ This shopping list app is a full-stack application developed using multiple tech
 
 ## How to use
 1. Sign Up/Log In
-2. Click the ➕
+2. Click the ➕ to create a new list
 3. Create a name for your list
 4. Click on the list to open it
-5. Type into the add item input and click the button
-6. Click the trash bin to remove the item or the checkbox to cross it off
+5. Type into the add item input and hit enter
+6. Click the 🗑️ to remove the item
+7. Click on the item to cross it off
 7. Click the hamburger menu to return to all your lists or to log out
-8. Click the trash bin to remove the list
+8. Click the 🗑️ to remove the list
 9. Sign Out
 
 
@@ -31,12 +32,12 @@ This shopping list app is a full-stack application developed using multiple tech
 
 
 ## Initial Plan
-1. Get log in/log out working
-2. Lists can be added
-3. Lists can be deleted
-4. When in a list you can add items to it
-5. Items can be deleted
-6. Items can be checked off and crossed out
+1. Get log in/log out working :white_check_mark:
+2. Lists can be added :white_check_mark:
+3. Lists can be deleted :white_check_mark:
+4. When in a list you can add items to it :white_check_mark:
+5. Items can be deleted :white_check_mark:
+6. Items can be checked off and crossed out :white_check_mark:
 
 ![Wireframe (User settings/all lists)](./images/All%20Lists.png)
 ![Wireframe (Coles list)](./images/Coles%20List.png)
@@ -44,16 +45,18 @@ This shopping list app is a full-stack application developed using multiple tech
 
 ## Extra Plan
 1. Items can then be split up into categories
-2. Different users have different lists and items
+2. Different users have different lists and items :white_check_mark:
+3. User can remove their profile
 
 ## Struggles
-Starting out instead of trying to just get each feature to work one by one, I tried to get it all working together at once making me waste a lot of my time trouble shooting.
+Starting out instead of trying to just get each feature to work one by one, I tried to get it all working together at once making me waste a lot of my time trouble shooting bugs.
 
 ## Bugs to Fix
-- If nothing is entered in the input field for adding a list or item it will still add data to the database
+- If nothing is entered in the input field for adding a list or item it will still add data to the database.
+- If you've crossed off an item then reload the page, the item doesn't stay crossed off.
 
 ## Future Features
-- Items are automatically added into categories and sorted
+- Items are automatically added into categories and displayed by their categories.
 
 ## Sources Used
 https://coolors.co/
