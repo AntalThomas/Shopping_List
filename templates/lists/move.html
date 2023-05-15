@@ -4,10 +4,8 @@
 <h1>What list do you want to move?  <a href="/">RETURN TO INDEX</a></h1> 
 
 {% for list in lists %}
-    <h1>{{ list['id'] }} {{ item_info['linked_list'] }}</h1>
-
     {% if list['id'] != item_info['linked_list'] %}
-        <form action="/lists/{{ list_id }}/list/move" method="POST" class="remove_spacing">
+        <form action="/lists/{{ list['id'] }}/{{ item_info['id'] }}/send_item" method="POST" class="remove_spacing">
             <button>{{ list['name'] }}</button>
         </form>
     {% endif %}

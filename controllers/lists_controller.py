@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, session
 from services.session_info import current_user
-from models.lists import all_lists, create_list, delete_list, get_list, get_list_name, make_item, delete_item, item_linked_list, update_item_sql, get_item, get_users
+from models.lists import all_lists, create_list, delete_list, get_list, get_list_name, make_item, delete_item, item_linked_list, update_item_sql, get_item, get_users, move_item_sql
 
 def index():
     lists = all_lists()
@@ -56,3 +56,7 @@ def move_item(id):
     lists = all_lists()
     item_info = get_item(id)
     return render_template("lists/move.html", lists=lists, item_info=item_info)
+
+def send_item(list_id, item_id):
+    move_item_sql(list_id, item_id)
+    return select_list(list_id)
