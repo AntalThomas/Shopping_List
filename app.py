@@ -1,12 +1,13 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-import os
+import os, requests
 from flask import Flask, redirect
 from routes.users_routes import users_routes
 from routes.sessions_routes import sessions_routes
 from routes.lists_routes import lists_routes
 
+requests.get(f"http://SLdbapi.com?apikey={os.environ.get('SLDB_API_KEY')}&t=jaws").json()
 SECRET_KEY = os.environ.get("SLDB_API_KEY")
 
 app = Flask(__name__)
