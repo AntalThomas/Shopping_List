@@ -1,13 +1,13 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-import os, secrets
+import os
 from flask import Flask, redirect
 from routes.users_routes import users_routes
 from routes.sessions_routes import sessions_routes
 from routes.lists_routes import lists_routes
 
-SECRET_KEY = os.environ.get("SECRET_KEY", "pretend key")
+SECRET_KEY = os.environ.get("SLDB_API_KEY")
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = SECRET_KEY
