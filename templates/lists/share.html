@@ -1,0 +1,17 @@
+<!-- need to do -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Who do you want to share your list with? <a href="/">RETURN TO INDEX</a></h1> 
+
+{% for user in all_users %}
+
+{% if user_id != user['id'] %}
+<form action="/lists/{{ list_id }}/list/share" method="POST" class="remove_spacing">
+    <button>{{ user['first_name'] }} {{ user['last_name'] }}</button>
+</form>
+{% endif %}
+{% endfor %}
+
+{% endblock %}

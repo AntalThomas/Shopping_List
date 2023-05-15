@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit Item</h1>
+
+<form action="/lists/{{ item['id'] }}/update_item" method="POST">
+    <label for="">Name:</label>
+    <input type="text" name="name" value="{{ item['name'] }}">
+
+    <button>Edit Item</button>
+</form>
+{% endblock %}

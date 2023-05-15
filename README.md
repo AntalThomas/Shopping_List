@@ -46,7 +46,9 @@ This shopping list app is a full-stack application developed using multiple tech
 ## Extra Plan
 1. Items can then be split up into categories
 2. Different users have different lists and items :white_check_mark:
-3. User can remove their profile
+3. User can remove their profile :white_check_mark:
+4. Move items between lists
+5. Send lists to other users
 
 ## Struggles
 Starting out instead of trying to just get each feature to work one by one, I tried to get it all working together at once making me waste a lot of my time trouble shooting bugs.

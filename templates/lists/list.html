@@ -24,9 +24,13 @@
                     <button class="item_name"><h4>{{ item['name'] }}</h4></button>
                 </section>
                 
-                <form action="/lists/{{ item['id'] }}/list/delete" method="POST" class="remove_spacing">
-                    <button>🗑️</button>
-                </form>
+                <section class="controls">
+                    <a href="/lists/{{ item['id'] }}/edit_item.html" class="remove_spacing">✏️</a>
+                    
+                    <form action="/lists/{{ item['id'] }}/list/delete" method="POST" class="remove_spacing">
+                        <button>🗑️</button>
+                    </form>
+                </section>
             </section>
         {% endfor %}
     </section>
