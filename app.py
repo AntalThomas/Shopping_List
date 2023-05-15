@@ -8,7 +8,6 @@ SECRET_KEY = os.environ.get("SHOPPING_KEY")
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
-app.config['SESSION_TYPE'] = 'filesystem'
 
 app.register_blueprint(users_routes, url_prefix="/users")
 app.register_blueprint(sessions_routes, url_prefix="/sessions")
