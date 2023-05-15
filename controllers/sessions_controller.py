@@ -17,6 +17,8 @@ def create():
     
     if valid_password:
         session['user_id'] = user['id']
+        session['email'] = user['email']
+        session['password'] = user['password_digest']
         return redirect('/')
     else:
         return redirect('/sessions/new')

@@ -7,8 +7,7 @@ from routes.lists_routes import lists_routes
 SECRET_KEY = os.environ.get("SHOPPING_KEY")
 
 app = Flask(__name__)
-app.secret_key = SECRET_KEY
-app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SECRET_KEY'] = SECRET_KEY
 
 app.register_blueprint(users_routes, url_prefix="/users")
 app.register_blueprint(sessions_routes, url_prefix="/sessions")
