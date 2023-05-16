@@ -2,10 +2,10 @@ from db.db import sql
 from flask import session
 
 def all_lists():
-    return sql('SELECT * FROM lists WHERE linked_user=%s ORDER BY id', [session.get('user_id')])
+    return sql('SELECT * FROM lists WHERE linked_user=%s ORDER BY favourite DESC', [session.get('user_id')])
 
-def create_list(name, linked_user):
-    sql('INSERT INTO lists(name, linked_user) VALUES (%s, %s) RETURNING *', [name, linked_user])
+def create_list(name, linked_user, favourite):
+    sql('INSERT INTO lists(name, linked_user, favourite) VALUES (%s, %s, %s) RETURNING *', [name, linked_user, favourite])
 
 def delete_list(id):
     sql('DELETE FROM lists WHERE id=%s RETURNING *', [id])
@@ -38,3 +38,11 @@ def get_users():
 
 def move_item_sql(list_id, item_id):
     sql('UPDATE items SET linked_list=%s WHERE id=%s RETURNING *', [list_id, item_id])
+
+def favourite_list_sql(id):
+    list_favourite = sql('SELECT favourite FROM lists WHERE id=%s', [id])
+
+    if list_favourite[0]['favourite'] == 0:
+        sql('UPDATE lists SET favourite=%s WHERE id=%s RETURNING *', [1, id])
+    else:
+        sql('UPDATE lists SET favourite=%s WHERE id=%s RETURNING *', [0, id])

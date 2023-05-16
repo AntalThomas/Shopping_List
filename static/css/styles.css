@@ -73,7 +73,6 @@ body {
     height: 75px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-bottom: 2px solid #042a2b;
 }
 
@@ -84,6 +83,7 @@ body {
 .remove_spacing {
     margin: 0;
     padding: 0;
+    border-bottom: 0;
 }
 
 .crossed_off {
@@ -171,4 +171,9 @@ a {
 
 .controls {
     display: flex;
+}
+
+a.lists {
+    margin: 0;
+    padding: 0;
 }

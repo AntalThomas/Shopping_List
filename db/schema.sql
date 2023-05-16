@@ -4,7 +4,8 @@ CREATE DATABASE shopping_list_db;
 CREATE TABLE lists(
     id SERIAL PRIMARY KEY,
     name TEXT,
-    linked_user INTEGER
+    linked_user INTEGER,
+    favourite INTEGER
 );
 
 CREATE TABLE items(
