@@ -12,7 +12,8 @@ CREATE TABLE items(
     id SERIAL PRIMARY KEY,
     name TEXT,
     linked_list INTEGER,
-    linked_user INTEGER
+    linked_user INTEGER,
+    crossed_off INTEGER
 );
 
 CREATE TABLE users(

@@ -12,13 +12,13 @@ def delete_list(id):
     sql('DELETE FROM items WHERE linked_list=%s RETURNING *', [id])
 
 def get_list(id):
-    return sql('SELECT * FROM items WHERE linked_list=%s ORDER BY id', [id])
+    return sql('SELECT * FROM items WHERE linked_list=%s ORDER BY crossed_off ASC', [id])
 
 def get_list_name(id):
     return sql('SELECT * FROM lists WHERE id=%s', [id])
 
-def make_item(name, linked_list):
-    sql('INSERT INTO items(name, linked_list, linked_user) VALUES (%s, %s, %s) RETURNING *', [name, linked_list, session.get('user_id')])
+def make_item(name, linked_list, crossed_off):
+    sql('INSERT INTO items(name, linked_list, linked_user, crossed_off) VALUES (%s, %s, %s, %s) RETURNING *', [name, linked_list, session.get('user_id'), crossed_off])
 
 def delete_item(id):
     sql('DELETE FROM items WHERE id=%s RETURNING *', [id])
@@ -46,3 +46,11 @@ def favourite_list_sql(id):
         sql('UPDATE lists SET favourite=%s WHERE id=%s RETURNING *', [1, id])
     else:
         sql('UPDATE lists SET favourite=%s WHERE id=%s RETURNING *', [0, id])
+
+def crossed_off_sql(id):
+    crossed_off = sql('SELECT crossed_off FROM items WHERE id=%s', [id])
+
+    if crossed_off[0]['crossed_off'] == 0:
+        sql('UPDATE items SET crossed_off=%s WHERE id=%s RETURNING *', [1, id])
+    else:
+        sql('UPDATE items SET crossed_off=%s WHERE id=%s RETURNING *', [0, id])

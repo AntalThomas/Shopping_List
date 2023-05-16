@@ -20,9 +20,9 @@
     <section class="all_items">
         {% for item in list %}
             <section class="items">
-                <section class="remove_spacing">
+                <form action="/lists/{{ item['id'] }}/list/crossed_off" class="remove_spacing" method="POST">
                     <button class="item_name"><h4>{{ item['name'] }}</h4></button>
-                </section>
+                </form>
                 
                 <section class="controls">
                     <a href="/lists/{{ item['id'] }}/edit_item.html" class="remove_spacing">✏️</a>
