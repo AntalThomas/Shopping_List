@@ -22,8 +22,11 @@
     <section class="all_lists">
         {% for list in lists %}
             <a class="lists" href="/lists/{{ list['id'] }}/list">
-                <h2 class="remove_spacing">{{ list['name'] }}</h2>
-
+                {% if list['favourite'] == 1 %}
+                    <h2 class="remove_spacing favourited">{{ list['name'] }}</h2>
+                {% else %}
+                    <h2 class="remove_spacing">{{ list['name'] }}</h2>
+                {% endif %}
                 <section class="controls">
                     <form action="/lists/{{ list['id'] }}/favourite_list" method="POST" class="remove_spacing">
                         <button>⭐</button>

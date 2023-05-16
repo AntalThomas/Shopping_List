@@ -20,10 +20,16 @@
     <section class="all_items">
         {% for item in list %}
             <section class="items">
-                <form action="/lists/{{ item['id'] }}/list/crossed_off" class="remove_spacing" method="POST">
-                    <button class="item_name"><h4>{{ item['name'] }}</h4></button>
-                </form>
-                
+                {% if item['crossed_off'] == 0 %}
+                    <form action="/lists/{{ item['id'] }}/list/crossed_off" class="remove_spacing" method="POST">
+                        <button class="item_name"><h4>{{ item['name'] }}</h4></button>
+                    </form>
+                {% else %}
+                    <form action="/lists/{{ item['id'] }}/list/crossed_off" class="remove_spacing" method="POST">
+                        <button class="item_name crossed_off"><h4>{{ item['name'] }}</h4></button>
+                    </form>
+                {% endif %}
+
                 <section class="controls">
                     <a href="/lists/{{ item['id'] }}/edit_item.html" class="remove_spacing">✏️</a>
                     <a href="/lists/{{ item['id'] }}/move.html" class="remove_spacing">📄</a>

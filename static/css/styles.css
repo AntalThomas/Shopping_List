@@ -177,3 +177,7 @@ a.lists {
     margin: 0;
     padding: 0;
 }
+
+.favourited {
+    color: gold;
+}

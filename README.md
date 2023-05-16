@@ -47,12 +47,16 @@ This shopping list app is a full-stack application developed using multiple tech
 1. Items can then be split up into categories
 2. Different users have different lists and items :white_check_mark:
 3. User can remove their profile :white_check_mark:
-4. Move items between lists
+4. Move items between lists :white_check_mark:
 5. Send lists to other users
+6. Export SQL data
 
 ## Struggles
 Starting out instead of trying to just get each feature to work one by one, I tried to get it all working together at once making me waste a lot of my time trouble shooting bugs.
+
 Deploying the website and getting Flask-session to work was a big issue for me and a few other students.
+
+Coming up with ideas and features was probably the biggest trouble for me.
 
 ## Bugs to Fix
 - If nothing is entered in the input field for adding a list or item it will still add data to the database.
@@ -60,6 +64,7 @@ Deploying the website and getting Flask-session to work was a big issue for me a
 
 ## Future Features
 - Items are automatically added into categories and displayed by their categories.
+- SQL data from user can be exported to an excel spread sheet
 
 ## Sources Used
 https://coolors.co/
@@ -69,3 +74,4 @@ https://stackoverflow.com/questions/35077658/css-selector-for-no-children-but-no
 https://developer.mozilla.org/en-US/docs/Web/CSS/:has#browser_compatibility
 https://stackoverflow.com/questions/7298057/how-can-i-select-the-last-element-with-a-specific-class-not-last-child-inside-o
 https://www.markdownguide.org/cheat-sheet/
+https://www.databasestar.com/sql-boolean-data-type/
