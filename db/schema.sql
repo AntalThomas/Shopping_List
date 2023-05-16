@@ -23,3 +23,6 @@ CREATE TABLE users(
     email TEXT,
     password_digest TEXT
 );
+
+INSERT INTO users(first_name, last_name, email, password_digest) 
+VALUES('guest', 'guest', 'guest@guest', 'guest');

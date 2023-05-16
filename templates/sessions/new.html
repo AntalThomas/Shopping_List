@@ -12,4 +12,12 @@
 
     <button>Log In</button>
 </form>
+<form action="/sessions" method="POST">
+    <input type="email" name="email" value="guest@guest" hidden>
+    <input type="password" name="password"  value="guest" hidden>
+
+    <button>GUEST</button>
+</form>
+
+
 {% endblock %}

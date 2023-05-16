@@ -7,7 +7,7 @@ This shopping list app is a full-stack application developed using multiple tech
 ## [Click Here](https://antalthomas.github.io/Shopping_List/) to see my live project!
 
 ## How to use
-1. Sign Up/Log In
+1. Sign Up/Log In or Use guest account
 2. Click the ➕ to create a new list
 3. Create a name for your list
 4. Click on the list to open it
@@ -15,6 +15,7 @@ This shopping list app is a full-stack application developed using multiple tech
 6. Click the 🗑️ to remove the item
 7. Click on the item to cross it off
 7. Click the hamburger menu to return to all your lists or to log out
+8. Click the ⭐ to favourite a list
 8. Click the 🗑️ to remove the list
 9. Sign Out
 
@@ -28,7 +29,6 @@ This shopping list app is a full-stack application developed using multiple tech
 - Psycopg2
 - Bcrypt
 - Render Cloud Hosting
-- Javascript
 
 
 ## Initial Plan

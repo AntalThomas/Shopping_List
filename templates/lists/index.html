@@ -11,9 +11,11 @@
                 <button>Sign Out</button>
             </form>
 
-            <form action="/sessions/remove" method="POST">
-                <button>Remove Profile</button>
-            </form>
+            {% if current_user()['email'] != "guest@guest" %}
+                <form action="/sessions/remove" method="POST">
+                    <button>Remove Profile</button>
+                </form>
+            {% endif %}
 
             <a href="/lists/new">➕</a>
         </section>
@@ -27,6 +29,7 @@
                 {% else %}
                     <h2 class="remove_spacing">{{ list['name'] }}</h2>
                 {% endif %}
+                
                 <section class="controls">
                     <form action="/lists/{{ list['id'] }}/favourite_list" method="POST" class="remove_spacing">
                         <button>⭐</button>
