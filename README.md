@@ -4,7 +4,7 @@ SEI Project 2
 This shopping list app is a full-stack application developed using multiple technologies listed below. The app can be used to organize and check off everything you need before and after you go shopping. It will feature different categories*, quantities* and multiple list features.
 (* *COMING SOON*)
 
-## [Click Here](https://antalthomas.github.io/Shopping_List/) to see my live project!
+## [Click Here](https://shopping-list-ily8.onrender.com/lists) to see my live project!
 
 ## How to use
 1. Sign Up/Log In or Use guest account
